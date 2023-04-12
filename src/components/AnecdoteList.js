@@ -13,13 +13,12 @@ function AnecdoteList() {
     const dispatch = useDispatch()
 
     const vote = (id) => {
-        console.log('vote', id)
         dispatch(voteFor(id))
     }
     return (
         <div>
             <h2>Anecdotes</h2>
-            {state.sort((a, b) => b.votes - a.votes).map(anecdote =>
+            {[...state].sort((a, b) => b.votes - a.votes).map(anecdote =>
                 <div key={anecdote.id}>
                     <div>
                         {anecdote.content}
