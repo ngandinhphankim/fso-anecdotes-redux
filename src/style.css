@@ -1,0 +1,19 @@
+.notification {
+    /* position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    border: solid;
+    padding: 10px;
+    border-width: 1;
+    display: none;
+  }
+  
+  .notification.show {
+    display: block;
+  }
+  
