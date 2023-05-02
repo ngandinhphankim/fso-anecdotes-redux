@@ -13,9 +13,8 @@ function AnecdoteList() {
     
     const dispatch = useDispatch()
 
-    const vote = (id) => {
-        const anecdote = state.find(i => i.id == id)
-        dispatch(voteFor(id))
+    const vote = (anecdote) => {
+        dispatch(voteFor(anecdote))
         dispatch(notify(`You voted '${anecdote.content}'`))
     }
     return (
@@ -28,7 +27,7 @@ function AnecdoteList() {
                     </div>
                     <div>
                         has {anecdote.votes}
-                        <button onClick={() => vote(anecdote.id)}>vote</button>
+                        <button onClick={() => vote(anecdote)}>vote</button>
                     </div>
                 </div>
             )}
